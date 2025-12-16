@@ -5,8 +5,8 @@ const app = express()
 app.use(express.json());
 
 //import routes here
-import hw from "./routes/user.route.js";
+import userRouter from "./routes/user.route.js";
 
 //routes declaration
-app.use("/", hw)
+app.use("/api/v1/users", userRouter)
 export default app;

@@ -1,33 +1,34 @@
 import mongoose, { Schema } from "mongoose";
-import bcrypt from 'bcrypt';
 
-const userSchem = new Schema(
+
+const userSchema = new Schema(
     {
         username: {
             type: String,
             minlength: 1,
-            maxlenght: 20,
+            maxlength: 20,
             unique: true,
             trim: true,
             lowercase: true,
-            require: true,
+            required: true,
         },
         password: {
             type: String,
-            require: true,
+            required: true,
             minlength: 6,
-            maxlenght: 20,
+            maxlength: 20,
         },
         email: {
             type: String,
-            require: true,
+            required: true,
             lowercase: true,
             unique: true,
             trim: true,
         }
     },
 
-    { timestamps: true };
-
+    { timestamps: true }
 
 );
+
+export const User = mongoose.model("User", userSchema)
