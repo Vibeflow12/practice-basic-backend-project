@@ -1,5 +1,9 @@
-const hw = (req, res) => {
-    console.log("hello world");
-}
+
+
+//register 
+
+//login
+//logout
+
 
 export { hw }
