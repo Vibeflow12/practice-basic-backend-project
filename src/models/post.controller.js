@@ -1,4 +1,4 @@
-import { mongo, Schema } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const postSchema = new Schema(
     {
@@ -25,4 +25,4 @@ const postSchema = new Schema(
     }
 )
 
-export const Post = mongo.model("Post", postSchema);
+export const Post = mongoose.model("Post", postSchema);
